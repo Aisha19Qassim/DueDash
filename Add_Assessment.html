@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Add Assessment</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+     .assessmentth{ 
+        background-color: #f7eae2;
+        width:650px;
+        border: 4px solid #4CAF90; 
+        border-radius: 20px;
+        text-align: left;   
+    }
+    .assessmentth span{
+        margin-left: 15px;  
+    }
+    .assessmentth img{
+        position: relative;
+        top: 13px;          
+    }
+    .examTable{ margin-left: 25%;
+    }
+    th:hover{
+        background-color: #E8DCD2;
+        box-shadow: 0px 4px 16px #82bba9; 
+    }
+         
+    </style>
+</head>
+<body>
+    <header>
+             <table class="hdrtable" cellspacing="0" cellpadding="0">
+            <tr>
+            <td><img class="logo" src="Icons/Logo2.png" alt="Logo"></td>
+            <td>
+        <a class="link" href="Home.html">Home</a>
+        <a class= "link" href="Studytimer.html"> Study Timer </a>
+        <a class="link" href="AboutUs.html">About Us</a>
+        <a class="link" href="Sign-in.html">Sign in</a>
+            </td>
+            <td align="right"><a class="add" href="Add_Assessment.html"> &nbsp;+ Add Assessment &nbsp;</a></td>
+            </tr>
+          </table>
+    </header>
+    <hr>
+    <main>
+        <div style="text-align: center; margin-top: 30px;">
+        <h3 style="font-size: 26px;">
+            What Would you like to add?
+        </h3>
+        <p style="color: #16A085; font-size: 19px;">
+            Choose the type of assessment to add to your dashboard
+        </p>
+
+        <!-- Exam Choice-->
+        <table  class = "examTable" cellspacing="20" cellpadding="30px">
+            <tr onclick="window.location='Exam.html';" style="cursor: pointer;">
+                <th class = "assessmentth"><img src="Icons/exam.png" height="40" width="40" ><span>Exam</span></th>
+            </tr>
+            <tr onclick="window.location='Assignment.html';" style="cursor: pointer;">
+                <th class = "assessmentth"><img src="Icons/Assigments.png" height="45" width="45" ><span>Assignment</span></th>
+            </tr>
+            <tr onclick="window.location='Project.html';" style="cursor: pointer;">
+                <th class = "assessmentth"><img src="Icons/projects.png" height="40" width="40" ><span>Project</span></th>
+            </tr>
+        </table>
+       </div>
+    </main>
+    <hr style="margin-top:4%; ">
+     <footer>
+         <table align="center" class="footer" width="80%">
+             <tr>
+            <th width="160" style="border-right: 1px solid black;">Contact Us</th>
+            <th width="160" style="border-right: 1px solid black;"> Email address</th>
+            <th width="160" style="border-right: 1px solid black;">Location</th>
+            <th width="160" style="border-right: 1px solid black;">Current Time</th>
+             </tr>
+            <tr>
+             <td width="160" style="border-right: 1px solid black;">Phone:02 500 0123
+                <br>
+                <a class ="instagram" href="https://www.instagram.com/duedash_?igsh=MWt1ZWdzc2p5d2l5OA==">
+            <img id="instaIcon" src = "Icons/instagram.png" width= 85% height="85%" ></a>
+             </td>
+             <td width="160" style="border-right: 1px solid black;"><a href="mailto:1093356@students.adu.ac.ae">DueDash2026@gmail.com</a></td>
+             <td width="160" style="border-right: 1px solid black;">
+             United Arab Emirates<br>
+             Abu Dhabi</td>
+             <td width="160" style="border-right: 1px solid black;"> 
+                 <table class ="calender" border="1" align="center">
+                    <tr class="row1">
+                        <th style = "border:2px solid black; border-radius:4px; "><b>Time</b></th>
+                        <th style = "border:2px solid black; border-radius:4px;"><b>Day</b></th>
+                        <th style = "border:2px solid black; border-radius:4px;"><b>Month</b></th>
+                        <th style = "border:2px solid black; border-radius:4px;"><b>Year</b></th>
+                    </tr>
+                    <tr>
+                        <td id = "time"></td>
+                        <td id = "day"></td>
+                        <td id = "month"></td>
+                        <td id = "year"></td>
+                    </tr>
+                </table>
+             </td>
+             </tr>
+             
+                <script>
+                    var today = new Date();
+                    document.getElementById("time").innerHTML = today.getHours() + ":" + today.getMinutes();
+                    document.getElementById("day").innerHTML = today.getDate();
+                    document.getElementById("month").innerHTML = today.getMonth()+1;
+                    document.getElementById("year").innerHTML = today.getFullYear();
+                </script>
+                
+            </td>
+           </tr>
+         </table>
+        </footer> 
+</body>
+</html>

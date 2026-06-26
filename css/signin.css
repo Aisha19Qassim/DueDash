@@ -1,0 +1,153 @@
+body{
+background-color:#f5e3d5;
+font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+margin:0px;
+width:100%;
+}
+.mountain{
+    margin-left:0px;
+    float:left;
+    
+}
+.formy{
+    background: #f7eae2;
+    width:440px;
+    padding-top:7px;
+    padding-bottom: 30px;
+    padding-left: 30px;
+    padding-right:30px;
+    height:550px;
+    margin-top:0px;
+    margin-bottom:100px;
+    margin-right:60px;
+    border-radius:12px;
+    float:right;
+    border:3px solid #4caf90;
+    box-shadow: 0 0 12px #4caf90;
+}
+.logo{
+    margin-top: -16px;
+    margin-right:135px;
+    float:right;
+
+}
+
+.inback{
+    background: #eceae6;
+    width:350px;
+    text-align:center;
+    box-shadow: 0 0 12px #4caf90;
+    margin-top: -10px;  
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-bottom: 200px;
+    height:210px;
+    padding-bottom: 90px;
+    padding-top:90px;
+    border-radius:8px;
+    border:3px solid #4caf90;
+    float:right;
+}
+.words input{
+    padding:12px;
+    width:250px;
+    margin-bottom:7px; /*adding space between the boxe */
+    border: 1px;
+    border-radius: 5px;
+    border:1px solid #4caf90;
+    
+}
+
+h2{
+    text-align: center;
+    margin-top:25px;
+    color:#4caf90;
+    margin-bottom:50px;
+}
+input[type="submit"] {
+    width: 130px;
+    height:20px;
+    padding: 5px;
+    text-align: center;
+    background-color: #4caf90;
+    margin-left:65px;
+    color:white;
+}
+.words{
+    text-align: left;
+    margin-left: 30px;
+    color:#4caf90;
+    margin-top:-15px;
+
+}
+.submit:hover{
+  background-color: rgb(37, 148, 119);
+  cursor: pointer;
+  height: 40px;
+  width: 45%;
+  margin-left: 20%;
+  box-shadow: 0px 4px 16px #4caf90;            
+}
+
+.signUp:hover{
+  background-color: rgb(37, 148, 119);
+  cursor: pointer;
+  height: 40px;
+  width: 45%;
+  margin-left: 20%;
+  box-shadow: 0px 4px 16px #4caf90; 
+}
+
+.submit{
+    display: block; 
+    height: 40px;
+    width: 45%;
+    margin-left: 20%;
+    background-color: #4caf90;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    line-height: 50px;
+    border-radius: 8px; 
+    border: white solid 3px;
+}
+
+.errorbox, .errorbox2{
+    font-size:20px;
+    margin: 0 auto 15px auto;
+    position:absolute;
+    top:280px;
+    text-shadow:2px 2px 4px #4caf90;
+    font-weight: bold;
+    
+}
+
+.signUp{
+    display: block; 
+    height: 40px;
+    width: 45%;
+    margin-left: 20%;
+    background-color: #4caf90;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    line-height: 50px;
+    border-radius: 8px; 
+    border: white solid 3px;
+}
+.mountain{
+    margin-left: 50px;
+    margin-top:-50px;
+    float: left;
+}
+.signIN {
+    
+    width: 100%;
+    padding-top: 100px;  
+}
+.mountain img {
+    width: 620px;
+    height: 620px;
+    margin-top: 0px;
+    margin-left: 10px;
+}

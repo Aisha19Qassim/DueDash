@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Study Timer</title>
+    <link rel="stylesheet" href="css/styles.css">
+
+    <style>
+        body {
+            background-color: #F3E6DB;
+            text-align: center;
+        }
+
+        .methodTable {
+            margin: 30px auto;
+            border-spacing: 20px;
+        }
+
+        .methodTable td {
+            background-color: #FFF9F5;
+            border: 2px solid #2d9c8c;
+            width: 250px;
+            height: 190px;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .methodTable td:hover {
+            background-color: #E8DCD2;
+        }
+
+        #studyCard {
+            display: none;
+            background-color: #FFF9F5;
+            border: 3px solid #2d9c8c;
+            width: 600px;
+            margin: 40px auto;
+            padding: 30px;
+            border-radius: 15px;
+        }
+
+        #bigTime {
+            font-size: 70px;
+            color: #2d9c8c;
+            margin: 15px;
+            font-weight: bold;
+        }
+
+        #phaseTitle {
+            font-size: 36px;
+        }
+
+        #message {
+            font-size: 30px;
+            font-weight: bold;
+            width: 85%;
+            margin: 25px auto;
+            line-height: 1.2;
+        }
+
+        #startTime, #endTime {
+            font-size: 22px;
+            font-weight: bold;
+            color: #2d9c8c;
+        }
+
+        input {
+            background-color: #2d9c8c;
+            color: white;
+            border: none;
+            padding: 10px 18px;
+            margin: 8px;
+            border-radius: 5px;
+        }
+
+        #endButton {
+            background-color: #b85c5c;
+        }
+    </style>
+
+   <script src="js/studytimer.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <table class="hdrtable" cellspacing="0" cellpadding="0">
+            <tr>
+            <td><img class="logo" src="Icons/Logo2.png" alt="Logo"></td>
+            <td>
+        <a class="link" href="Home.html">Home</a>
+        <a class= "link" href="Studytimer.html"> Study Timer </a>
+        <a class="link" href="AboutUs.html">About Us</a>
+        <a class="link" href="Sign-in.html">Sign in</a>
+            </td>
+            <td align="right"><a class="add" href="Add_Assessment.html"> &nbsp;+ Add Assessment &nbsp;</a></td>
+            </tr>
+          </table>
+    </header>
+
+    <hr>
+
+    <h1>Study Timer</h1>
+
+    <p>
+        Choose a study method to organize your focus and break sessions.
+    </p>
+
+    <table class="methodTable">
+        <tr>
+            <td>
+                <h3>Study Sprint Method</h3>
+                <p>15 minutes work + 5 minutes break</p>
+                <input type="button" value="Choose"
+                       onclick="chooseMethod(15, 5, 'Study Sprint Method');">
+            </td>
+
+            <td>
+                <h3>Balanced Study Method</h3>
+                <p>30 minutes work + 15 minutes break</p>
+                <input type="button" value="Choose"
+                       onclick="chooseMethod(30, 15, 'Balanced Study Method');">
+            </td>
+
+            <td>
+                <h3>Deep Focus Method</h3>
+                <p>45 minutes work + 15 minutes break</p>
+                <input type="button" value="Choose"
+                       onclick="chooseMethod(45, 15, 'Deep Focus Method');">
+            </td>
+
+            <td>
+                <h3>Power Session Method</h3>
+                <p>60 minutes work + 20 minutes break</p>
+                <input type="button" value="Choose"
+                       onclick="chooseMethod(60, 20, 'Power Session Method');">
+            </td>
+        </tr>
+    </table>
+
+    <div id="studyCard">
+        <h2 id="methodName"></h2>
+
+        <p id="round">Round 1</p>
+
+        <h3 id="phaseTitle">Ready to Begin</h3>
+
+        <div id="bigTime">00:00</div>
+
+        <p id="message"></p>
+
+        <p id="startTime"></p>
+        <p id="endTime"></p>
+
+        <input type="button" id="startButton" value="Start Session"
+               onclick="startSession();">
+
+        <input type="button" id="checkButton" value="Check Time"
+               onclick="checkTime();" style="display: none;">
+
+        <br>
+
+        <input type="button" id="endButton" value="I'm done working!"
+               onclick="endSession();">
+    </div>
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Project Page</title>
+        <link rel="stylesheet" href="css/styles.css">
+        <script src="js/dashboard.js" defer></script>
+        <style>
+             
+        </style>
+    </head>
+    <body>
+        <header>
+             <table class="hdrtable" cellspacing="0" cellpadding="0">
+            <tr>
+            <td><img class="logo" src="Icons/Logo2.png" alt="Logo"></td>
+            <td>
+        <a class="link" href="Home.html">Home</a>
+        <a class= "link" href="Studytimer.html"> Study Timer </a>
+        <a class="link" href="AboutUs.html">About Us</a>
+        <a class="link" href="Sign-in.html">Sign in</a>
+            </td>
+            <td align="right"><a class="add" href="Add_Assessment.html"> &nbsp;+ Add Assessment &nbsp;</a></td>
+            </tr>
+          </table>
+        </header>
+        <hr >
+        <main>
+            <form >
+                <h3 style="text-shadow: 0.1em 0.1em 0.2em rgb(113, 222, 218); font-size: 20px;">Project Details</h3>
+                <div><label for="title">Project Title</label><br>
+                <input type="text" id="projtitle" name="title" placeholder="e.g.web application" required>
+                </div><br>
+                <div><label for="course">Course Name</label><br>
+                <input type="text" id="projcourse" name="course"  placeholder=" e.g.Web Design" required>
+                </div><br>
+                
+                <div ><label for="date">Project submission</label><br>
+                <input type="date" id="projdate" name="date" required>
+                </div><br>
+                <div ><label for="date">Presentation date</label><br>
+                <input type="date" id="presdate" name="date" required>
+                </div><br>
+
+                <div>
+                <label for="Priority">Priority</label><br>
+                <select  id="projPriority">
+                    <option>&#128515 Low</option>
+                    <option>&#128533 Medium</option>
+                    <option>&#128561 High</option>
+                </select></div><br>
+                
+                <div><label>Description (Optional)</label><br>
+                <textarea id="projDes" cols="50" rows="5" placeholder="Add any additional details..."></textarea>
+            
+                <br>
+                <div>
+                <button type="button" class="submit" id="porjBtn" onclick="projectCard()" style="margin-top:20px" >Add Project</button></div>
+            </form> 
+        </main>
+         <hr style="margin-top:4%; ">
+     
+     <footer>
+         <table align="center" class="footer" width="80%">
+             <tr>
+            <th width="160" style="border-right: 1px solid black;">Contact Us</th>
+            <th width="160" style="border-right: 1px solid black;"> Email address</th>
+            <th width="160" style="border-right: 1px solid black;">Location</th>
+            <th width="160" style="border-right: 1px solid black;">Current Time</th>
+             </tr>
+            <tr>
+             <td width="160" style="border-right: 1px solid black;"><br>Phone:02 500 0123
+                <br>
+                <a class ="instagram" href="https://www.instagram.com/duedash_?igsh=MWt1ZWdzc2p5d2l5OA==">
+            <img id="instaIcon" src = "Icons/instagram.png" width= 85% height="85%" ></a>
+             </td>
+             <td width="160" style="border-right: 1px solid black;"><a href="mailto:1093356@students.adu.ac.ae">DueDash2026@gmail.com</a></td>
+             <td width="160" style="border-right: 1px solid black;">
+             United Arab Emirates<br>
+             Abu Dhabi</td>
+             <td width="160" style="border-right: 1px solid black;"> 
+                 <table class ="calender" border="1" align="center">
+                    <tr class="row1">
+                        <th style = "border:2px solid black; border-radius:4px; "><b>Time</b></th>
+                        <th style = "border:2px solid black; border-radius:4px;"><b>Day</b></th>
+                        <th style = "border:2px solid black; border-radius:4px;"><b>Month</b></th>
+                        <th style = "border:2px solid black; border-radius:4px;"><b>Year</b></th>
+                    </tr>
+                    <tr>
+                        <td id = "time"></td>
+                        <td id = "day"></td>
+                        <td id = "month"></td>
+                        <td id = "year"></td>
+                    </tr>
+                </table>
+             </td>
+             </tr>
+             
+                <script>
+                    var today = new Date();
+                    document.getElementById("time").innerHTML = today.getHours() + ":" + today.getMinutes();
+                    document.getElementById("day").innerHTML = today.getDate();
+                    document.getElementById("month").innerHTML = today.getMonth()+1;
+                    document.getElementById("year").innerHTML = today.getFullYear();
+                </script>
+                
+            </td>
+           </tr>
+         </table>
+        </footer> 
+    </body>
+</html>
