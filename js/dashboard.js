@@ -151,7 +151,7 @@ function showProjectCard() {
                     "<p><img src='Icons/presentation.png' width='18' height='18'> " + presentationDate + "</p>" +
                     "<p>" + description + "</p>" +
                     "<button class='" + priorityClass + "'>" + priority + "</button><br>" +
-        "<button class='delete-btn' onclick='deleteAssignment(" + i + ")'>🗑 Delete</button>" +
+        "<button class='delete-btn' onclick='deleteProject(" + i + ")'>🗑 Delete</button>" +
 
 
                     "</div>";
@@ -198,7 +198,7 @@ function showExamCard() {
                     "<p><img src='Icons/timer.png' width='18' height='18'> " + date + "</p>" +
                     "<p>Worth: " + percentage + "</p>" +
                     "<button class='" + priorityClass + "'>" + priority + "</button><br>" +
-        "<button class='delete-btn' onclick='deleteAssignment(" + i + ")'>🗑 Delete</button>" +
+        "<button class='delete-btn' onclick='deleteExam(" + i + ")'>🗑 Delete</button>" +
                     "</div>";
             }
         }
